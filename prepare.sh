@@ -7,13 +7,14 @@ if [ -z "$NAME" ]; then
   exit 1
 fi
 
-SUBNAME=$(echo $NAME | tr '[A-Z]' '[a-z]')
-ENVNAME="$(echo $NAME | tr '[a-z-]' '[A-Z_]')_ROOT"
+SUBNAME=$(echo "$NAME" | tr '[A-Z]' '[a-z]')
+ENVNAME="$(echo "$NAME" | tr '[a-z-]' '[A-Z_]')_ROOT"
 
 echo "Preparing your '$SUBNAME' sub!"
 
 if [ "$NAME" != "sub" ]; then
   rm bin/sub
+  rm share/sub/example
   mv share/sub share/$SUBNAME
 
   for file in **/sub*; do
