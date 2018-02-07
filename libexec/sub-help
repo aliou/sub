@@ -82,12 +82,18 @@ fi
 
 command="$1"
 case "$command" in
-"") echo "Usage: sub <command> [<args>]
+"") echo "NAME:
+   sub
 
-Some useful sub commands are:
+USAGE:
+   sub <command> [arguments]
+
+VERSION:
+   v$(version)
+
+COMMANDS:
 $(print_summaries)
-
-See 'sub help <command>' for information on a specific command."
+"
 ;;
 *)
   file="$(command_path "$command")"
