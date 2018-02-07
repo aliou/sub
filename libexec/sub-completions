@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Usage: sub completions <command> [arg1 arg2...]
 set -e
 
 COMMAND="$1"
