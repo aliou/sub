@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# Usage: snap version
-# Summary: Shows the current version of the snap tool.
-# Help: Shows the current version of the snap tool.
+# Usage: sub version
+# Summary: Shows the current version of the sub tool.
+# Help: Shows the current version of the sub tool.
 
 cat "$_SUB_ROOT/VERSION"

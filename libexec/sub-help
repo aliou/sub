@@ -62,6 +62,11 @@ help() {
   awk '/^[^#]/{p=0} /^# Help:/{p=1} p' "$1" | sed "s/^# Help: //;s/^# //;s/^#//"
 }
 
+version() {
+  exec "sub-version"
+}
+
+
 truncate() {
   local max_length="$1"
   local string="$2"
